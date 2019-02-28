@@ -1,0 +1,45 @@
+{
+  "name": "ava-testing",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "react-scripts": "2.1.5"
+  },
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "babel-preset-react-app": "^0.2.1",
+    "babel-register": "^6.16.3",
+    "cross-env": "^3.0.0",
+    "ignore-styles": "^5.0.1",
+    "jsdom": "^9.5.0",
+    "react-scripts": "0.6.1"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "cross-env NODE_ENV=test ava",
+    "eject": "react-scripts eject"
+  },
+  "babel": {
+    "presets": "react-app"
+  },
+  "ava": {
+    "babel": "inherit",
+    "require": [
+      "babel-register",
+      "ignore-styles",
+      "./src/test-setup"
+    ]
+  }
+}
