@@ -2,6 +2,7 @@ import { combineReducers } from "redux";
 import { TOGGLE_TODO } from "./actions";
 
 export const todos = (state = [], action) => {
+  console.log(action);
   switch (action.type) {
     case TOGGLE_TODO:
       return state.map(t => {
